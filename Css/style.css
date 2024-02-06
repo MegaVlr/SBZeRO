@@ -1,0 +1,81 @@
+/* Start Variables */
+:root {
+  --Color-1: #ffc0cb;
+  --Color-2: #ffffff;
+  --Color-3: #ff7373;
+  --Color-4: #333333;
+}
+
+/* End Variables */
+body {
+  background-image: url(../imgs/Untitled-1.png);
+  background-color: var(--Color-1);
+  font-family: "Workbench", sans-serif;
+  color: var(--Color-3);
+}
+
+.root {
+  margin: 100px auto;
+}
+.root .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.root .container .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .root .container .content {
+    flex-direction: column;
+  }
+}
+.root .container .content .img {
+  text-align: center;
+  padding: 20px;
+}
+.root .container .content .img iframe {
+  width: 200px;
+  height: 500px;
+  border: 2px solid var(--Color-2);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+@media (max-width: 767px) {
+  .root .container .content .img iframe {
+    width: 100%;
+  }
+}
+.root .container .content .text {
+  padding: 20px;
+  text-align: center;
+  border: 1px dashed var(--Color-2);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  animation: b-color 0.3s infinite linear alternate;
+  -webkit-animation: b-color 0.3s infinite linear alternate;
+}
+@keyframes b-color {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: var(--Color-2);
+  }
+}
+.root .container .content .text i {
+  font-size: 30px;
+}
+.root .container .content .text p {
+  font-size: 26px;
+}
